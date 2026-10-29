@@ -82,3 +82,11 @@ def lihat_data():
 # Tampilan
 root = tk.Tk()
 root.title("Prediksi Risiko Diabetes")
+
+tk.Label(root, text="Nama Pasien").grid(row=0, column=0, padx=10, pady=5, sticky="w")
+entry_nama = tk.Entry(root, width=25)
+entry_nama.grid(row=0, column=1)
+
+tk.Label(root, text="Usia").grid(row=1, column=0, padx=10, pady=5, sticky="w")
+entry_usia = tk.Entry(root, width=25)
+entry_usia.grid(row=1, column=1)
