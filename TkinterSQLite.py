@@ -14,3 +14,21 @@ cur.execute("""CREATE TABLE IF NOT EXISTS pasien (
     riwayat_ortu TEXT,
     hasil_prediksi TEXT)""")
 conn.commit()
+
+# Prediksi risiko
+def prediksi(gula, bmi, riwayat):
+    if gula >= 200:
+        if bmi >= 30 or riwayat == "Ya":
+            return "Sangat Tinggi"
+        return "Tinggi"
+    elif gula >= 140:
+        if bmi >= 30 or riwayat == "Ya":
+            return "Tinggi"
+        return "Sedang"
+    elif bmi >= 30:
+        if riwayat == "Ya":
+            return "Sedang"
+        return "Waspada"
+    elif riwayat == "Ya":
+        return "Waspada"
+    return "Rendah"
