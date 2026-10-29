@@ -79,3 +79,6 @@ def lihat_data():
     for baris in cur.fetchall():
         tabel.insert("", tk.END, values=baris)
 
+# Tampilan
+root = tk.Tk()
+root.title("Prediksi Risiko Diabetes")
